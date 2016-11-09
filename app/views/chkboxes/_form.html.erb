@@ -12,10 +12,10 @@
     $(".sw_hante").click(function(){
       if($("#chkbox_hante:checked").val()){
         $("#chkbox_hante").prop("checked", false);
-        $(".sw_hante").attr("src", "/assets/off.png");
+        $(".sw_hante").attr("src", "<%= asset_path 'off.png' %>");
       }else{
         $("#chkbox_hante").prop("checked", true);
-        $(".sw_hante").attr("src", "/assets/on.png");
+        $(".sw_hante").attr("src", "<%= asset_path 'on.png' %>");
       }
     })
   });
