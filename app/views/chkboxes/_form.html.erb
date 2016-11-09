@@ -3,9 +3,9 @@
     $(".hante").hide();
 
     if($("#chkbox_hante:checked").val()){
-      $(".sw_hante").attr("src", "/assets/on.png");
+      $(".sw_hante").attr("src", "<%= asset_path 'on.png' %>");
     }else{
-      $(".sw_hante").attr("src", "/assets/off.png");
+      $(".sw_hante").attr("src", "<%= asset_path 'off.png' %>");
     }
   });
   $(function(){
