@@ -1,0 +1,1 @@
+json.array! @chkboxes, partial: 'chkboxes/chkbox', as: :chkbox

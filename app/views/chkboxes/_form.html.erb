@@ -1,0 +1,45 @@
+<script type="text/javascript">
+  $(document).ready(function(){
+    $(".hante").hide();
+
+    if($("#chkbox_hante:checked").val()){
+      $(".sw_hante").attr("src", "/assets/on.png");
+    }else{
+      $(".sw_hante").attr("src", "/assets/off.png");
+    }
+  });
+  $(function(){
+    $(".sw_hante").click(function(){
+      if($("#chkbox_hante:checked").val()){
+        $("#chkbox_hante").prop("checked", false);
+        $(".sw_hante").attr("src", "/assets/off.png");
+      }else{
+        $("#chkbox_hante").prop("checked", true);
+        $(".sw_hante").attr("src", "/assets/on.png");
+      }
+    })
+  });
+</script>
+
+<%= form_for(@chkbox) do |f| %>
+  <% if @chkbox.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@chkbox.errors.count, "error") %> prohibited this chkbox from being saved:</h2>
+
+      <ul>
+      <% @chkbox.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :hante %><br>
+    <%= image_tag "off.png", class: "sw_hante" %>
+    <%= f.check_box :hante, class: "hante" %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

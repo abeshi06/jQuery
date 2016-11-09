@@ -1,0 +1,38 @@
+<%# jQueryの基本形
+$(function(){
+	$(セレクタ).アクション(function(){
+		やりたいこと
+	})
+}) %>
+<script type="text/javascript">
+  $(function(){
+    $(".alert").click(function(){
+      alert("きたーーーーー！");
+    })
+  });
+</script>
+
+<script type="text/javascript">
+  $(function(){
+    $(".switch").click(function(){
+	  $(".target").text('クリックされたよ！');
+    });
+  });
+</script>
+
+<div align="center">
+	<table border="1px">
+		<tr>
+			<th>アラート表示</th>
+			<td class="alert">アラートが～？</td>
+		</tr>
+	</table>
+	<br />
+	<table border="1px">
+		<tr>
+			<th>テキスト変更</th>
+			<td class="switch">クリックして！！！！</td>
+			<td class="target">ドキドキ...</td>
+		</tr>
+	</table>
+</div>

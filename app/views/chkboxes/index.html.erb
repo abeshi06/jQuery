@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Chkboxes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Hante</th>
+      <th>Suuji</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @chkboxes.each do |chkbox| %>
+      <tr>
+        <td><%= chkbox.hante %></td>
+        <td><%= chkbox.suuji %></td>
+        <td><%= link_to 'Show', chkbox %></td>
+        <td><%= link_to 'Edit', edit_chkbox_path(chkbox) %></td>
+        <td><%= link_to 'Destroy', chkbox, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Chkbox', new_chkbox_path %>

@@ -1,0 +1,22 @@
+<%# 複数準備OK %>
+<script type="text/javascript">
+  $(function(){
+    $(".show").click(function(){
+      $(".img").show();
+    });
+
+    $(".hide").click(function(){
+      $(".img").hide();
+    });
+  });
+</script>
+
+<div align="center">
+  <%= button_tag "なにがでるかな？", class: "show" %>
+
+  <div class="img" style="display: none">
+    <%= image_tag 'wnk.png', width: "60%", class: "wnk" %><br />
+    <%= button_tag "やめて", class: "hide" %>
+  </div>
+  <br />
+</div>

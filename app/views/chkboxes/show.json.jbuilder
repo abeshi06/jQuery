@@ -1,0 +1,1 @@
+json.partial! "chkboxes/chkbox", chkbox: @chkbox

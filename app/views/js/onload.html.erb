@@ -1,0 +1,31 @@
+<script type="text/javascript">
+  $(document).ready(function(){
+    alert("今日も一日がんばろーう");
+  });
+
+  $(function(){
+    $(".judge").click(function(){
+      if($("#in_put").val().length == 0){
+      	alert("凶")
+      }else if($("#in_put").val().length < 3){
+      	alert("末吉")
+      }else if($("#in_put").val().length < 6){
+      	alert("小吉")
+      }else if($("#in_put").val().length < 9){
+      	alert("大吉！！！！！！！！！！！！")
+      }else if($("#in_put").val().length < 10){
+      	alert("中吉")
+      }else if($("#in_put").val().length < 13){
+      	alert("吉")
+      }else{
+      	alert("今日も一日おつかれさまー")
+      }
+    });
+  });
+</script>
+
+<br />
+<br />
+
+<%= text_field "in", "put" %>
+<%= button_tag "占う", class: "judge" %>
